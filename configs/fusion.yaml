@@ -1,0 +1,22 @@
+method: Ridge Stacking
+
+base_models:
+  - LightGBM
+  - TFT
+  - Chronos-2 Full Fine-tuning
+
+method_selection:
+  dataset: 2025_only
+  protocol:
+    - Fold1_to_Fold2
+    - Fold1_plus_Fold2_to_Fold3
+
+ridge:
+  alpha: 100
+
+final_fit:
+  data: all_2025_valid_aligned_points
+
+final_test:
+  period: 2026-01-01_to_2026-08-20
+  test_used_for_model_selection: false

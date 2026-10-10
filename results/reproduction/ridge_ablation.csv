@@ -1,0 +1,5 @@
+ridge_combination,release_2026_monthly_mean_MAPE
+LGB+TFT,2.224383
+LGB+Chronos_FullFT,1.919511
+TFT+Chronos_FullFT,1.912458
+LGB+TFT+Chronos_FullFT,1.901927

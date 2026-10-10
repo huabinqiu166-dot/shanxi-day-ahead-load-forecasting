@@ -1,0 +1,8 @@
+# Tested with Python 3.12.11
+numpy==1.26.4
+pandas==2.2.3
+lightgbm==4.7.0
+torch==2.10.0
+lightning==2.6.6
+pytorch-forecasting==1.8.0
+scikit-learn==1.6.1

@@ -1,0 +1,29 @@
+model: Temporal Fusion Transformer
+version: V22-V1
+
+forecast:
+  encoder_length: 672
+  decoder_length: 96
+  target: load_residual_1d
+
+training:
+  batch_size: 16
+  learning_rate: 0.001
+  hidden_size: 32
+  hidden_continuous_size: 16
+  attention_heads: 4
+  dropout: 0.1
+  lstm_layers: 1
+  output_size: 1
+  fixed_epochs: 59
+  gradient_clip_val: 0.1
+  seed: 42
+
+loss:
+  type: QuantileLoss
+  quantiles:
+    - 0.5
+
+weight:
+  column: target_weight
+  definition: load_valid

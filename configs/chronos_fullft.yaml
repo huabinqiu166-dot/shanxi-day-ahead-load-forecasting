@@ -1,0 +1,30 @@
+model: amazon/chronos-2
+model_size: 120M
+mode: full_finetuning
+
+forecast:
+  context_days: 28
+  context_length: 2688
+  prediction_length: 96
+
+weather:
+  - temp_mean
+  - humidity_mean
+  - shortwave_mean_11city
+  - wind_speed_mean
+  - cloud_cover_mean
+  - precipitation_std
+
+training:
+  learning_rate: 1.0e-05
+  weight_decay: 0.0
+  batch_size: 28
+  scheduler_max_steps: 5000
+  eval_steps: 50
+  patience: 4
+  seed: 42
+
+rolling_2026:
+  fixed_stop_step: 200
+  fixed_stop_source: 2025_Fold3_best_step
+  fresh_base_model_each_month: true

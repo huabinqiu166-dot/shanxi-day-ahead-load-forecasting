@@ -1,0 +1,129 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ============================================================
+# Environments
+# ============================================================
+.venv/
+venv/
+env/
+.conda/
+
+# ============================================================
+# IDE
+# ============================================================
+.vscode/
+.idea/
+
+# ============================================================
+# OS
+# ============================================================
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Logs / temporary
+# ============================================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# ============================================================
+# Model weights / checkpoints
+# DO NOT publish trained Chronos weights
+# ============================================================
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+adapter_model.*
+checkpoint-*/
+checkpoints/
+models/
+weights/
+
+# ============================================================
+# Raw / seller data
+# ============================================================
+*.xlsx
+*.xls
+*.zip
+*.rar
+*.7z
+
+# ============================================================
+# Large intermediate binary files
+# ============================================================
+*.pkl
+*.pickle
+*.joblib
+*.npz
+*.npy
+
+# ============================================================
+# Secrets
+# ============================================================
+.env
+.env.*
+*.pem
+*.key
+credentials*
+token*
+secret*
+
+# ============================================================
+# HuggingFace / cache
+# ============================================================
+.cache/
+huggingface/
+hf_cache/
+wandb/
+lightning_logs/
+
+# Temporary verified release sources
+_verified_sources/
+
+# Temporary exact release source staging
+_release_source_stage/
+
+# Reproducible derived datasets
+data/derived/
+
+
+# ------------------------------------------------------------
+# Tracked compressed model inputs for public reproduction
+# ------------------------------------------------------------
+!data/model_inputs/**/*.pkl.gz
+!data/model_inputs/**/*.csv.gz
+
+# ===== RELEASE MODEL INPUT WHITELIST =====
+# These compressed files are intentionally tracked for reproducibility.
+# Explicit rules are used for compatibility with the server's older Git.
+
+!data/
+!data/model_inputs/
+
+!data/model_inputs/lightgbm/
+!data/model_inputs/tft/
+!data/model_inputs/chronos/
+!data/model_inputs/fusion/
+
+!data/model_inputs/lightgbm/lightgbm_v14_valid_supervised_v1.pkl.gz
+!data/model_inputs/lightgbm/lightgbm_v14_master_v1.pkl.gz
+
+!data/model_inputs/tft/all_v22_roll_gfs_v1.pkl.gz
+
+!data/model_inputs/chronos/unified_load_v1.pkl.gz
+!data/model_inputs/chronos/chronos_gfs_15min.pkl.gz
+
+!data/model_inputs/fusion/aligned_2025_three_models_and_fusions.csv.gz
+!data/model_inputs/fusion/aligned_2026_three_models_and_fusions.csv.gz

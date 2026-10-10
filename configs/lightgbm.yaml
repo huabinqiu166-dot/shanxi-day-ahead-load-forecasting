@@ -1,0 +1,15 @@
+model: LightGBM
+version: V14
+
+forecast:
+  frequency: 15min
+  horizon: 96
+
+features:
+  total_features: 48
+
+validation:
+  protocol: chronological_no_gap
+
+final:
+  rolling_tree_count: 1593

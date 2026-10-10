@@ -1,0 +1,7 @@
+model,release_2026_monthly_mean_MAPE
+LightGBM,2.546427
+TFT,2.606553
+Chronos-2 Zero-shot,2.106621
+Chronos-2 LoRA,1.990058
+Chronos-2 Full FT,1.94357
+Final Ridge Ensemble,1.901927

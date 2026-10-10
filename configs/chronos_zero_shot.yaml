@@ -1,0 +1,22 @@
+model: amazon/chronos-2
+mode: zero_shot
+
+forecast:
+  context_days: 28
+  context_length: 2688
+  prediction_length: 96
+  frequency: 15min
+  cross_learning: false
+
+weather:
+  - temp_mean
+  - humidity_mean
+  - shortwave_mean_11city
+  - wind_speed_mean
+  - cloud_cover_mean
+  - precipitation_std
+
+inference:
+  quantiles:
+    - 0.5
+  batch_size: 32

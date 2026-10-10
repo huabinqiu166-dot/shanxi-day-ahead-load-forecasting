@@ -1,0 +1,40 @@
+{
+  "shanxi_system_load.csv": {
+    "rows": 92448,
+    "columns": [
+      "timestamp",
+      "system_load_mw"
+    ],
+    "start_timestamp": "2024-01-01 00:15:00",
+    "end_timestamp": "2026-08-21 00:00:00",
+    "invalid_raw_points": 425,
+    "sha256": "68005addffcd60cb0a39577df30b243168a0be2455464c6deefc63a62ed31775"
+  },
+  "gfs_weather_15min.csv": {
+    "rows": 90720,
+    "columns": [
+      "target_date",
+      "timestamp",
+      "temp_mean",
+      "temp_max",
+      "temp_min",
+      "temp_std",
+      "humidity_mean",
+      "humidity_max",
+      "humidity_min",
+      "humidity_std",
+      "wind_speed_mean",
+      "wind_speed_max",
+      "wind_speed_min",
+      "cloud_cover_mean",
+      "precipitation_std",
+      "shortwave_mean_11city",
+      "shortwave_max_11city",
+      "shortwave_min_11city",
+      "shortwave_std_11city"
+    ],
+    "start_target_date": "2024-01-19 00:00:00",
+    "end_target_date": "2026-08-20 00:00:00",
+    "sha256": "a59d7b8b039e2670a36501be6158aefa82c3420caa332612c77f5aafafcc66d8"
+  }
+}

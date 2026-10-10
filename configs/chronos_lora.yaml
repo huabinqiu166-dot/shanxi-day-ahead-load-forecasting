@@ -1,0 +1,30 @@
+model: amazon/chronos-2
+mode: lora
+
+forecast:
+  context_days: 28
+  context_length: 2688
+  prediction_length: 96
+
+lora:
+  rank: 4
+  alpha: 16
+  dropout: 0.1
+
+target_modules:
+  - self_attention.q
+  - self_attention.k
+  - self_attention.v
+  - self_attention.o
+  - output_patch_embedding.output_layer
+
+training:
+  learning_rate: 2.833485198833818e-05
+  batch_size: 28
+  scheduler_max_steps: 5000
+  eval_steps: 50
+  patience: 4
+  seed: 42
+
+rolling_2026:
+  fixed_stop_step: 1400
